@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.row-div {
+  display: flex;
+}
+
+.row-div > div {
+  border-width: 1px;
+  border-style: solid;
+  border-color: blue;
+  padding: 20px;
+}
