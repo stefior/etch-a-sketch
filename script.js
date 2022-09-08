@@ -1,12 +1,20 @@
 "use strict";
 
-const containerDiv = document.querySelector('div');
-for (let i = 0; i < 16; i++) {
-  const rowDiv = document.createElement('div');
-  rowDiv.classList += 'row-div';
-  for (let n = 0; n < 16; n++) {
-    const cellDiv = document.createElement('div');
-    rowDiv.appendChild(cellDiv);
+const button = document.querySelector('button');
+button.onclick = () => createGrid(Number(prompt("New width: ")), Number(prompt("New height: ")));
+
+function createGrid(width, height) {
+  if (!width || !height) return;
+  const containerDiv = document.querySelector('div');
+  for (let i = 0; i < height; i++) {
+    const rowDiv = document.createElement('div');
+    rowDiv.classList += 'row-div';
+    for (let n = 0; n < width; n++) {
+      const cellDiv = document.createElement('div');
+      rowDiv.appendChild(cellDiv);
+    }
+    containerDiv.appendChild(rowDiv);
   }
-  containerDiv.appendChild(rowDiv);
 }
+
+createGrid(16, 16);
