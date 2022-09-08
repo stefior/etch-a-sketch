@@ -19,6 +19,8 @@ function createGrid(width, height) {
     }
     containerDiv.appendChild(rowDiv);
   }
+  const currentSize = document.querySelector('#current-size');
+  currentSize.textContent = `${width} x ${height}`;
 }
 
 createGrid(32, 32);
