@@ -21,4 +21,4 @@ function createGrid(width, height) {
   }
 }
 
-createGrid(8, 8);
+createGrid(32, 32);
